@@ -3,99 +3,245 @@
 <head lang="ru">
 	<title>Yell widget 8</title>
 	<meta charset="utf-8">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body style="margin: 0; font-family: Roboto; width: 300px;">
-	<style type="text/css">
-		#company1, #company2, #company3{
-			position: relative;
-			width: 73px;
-			height: 16px;
-			margin-top: -2px;
-			margin-bottom: 4px;
-		}
-		.rating, .stars{
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-		}
-		.stars{
-			width: 100%;
-		}
-		.rating{
-			width: 50px;
-			max-width: 73px;
-			background-color: #F04C49;
-		}
-		#company1 .rating{
-			width: 73px;
-		}
-		#company2 .rating{
-			width: 35px;
-		}
-		#company3 .rating{
-			width: 50px;
-		}
-	</style>
-	<div style="background-color: #fff; padding-left: 34px; padding-right: 34px; padding-top: 29px; padding-bottom: 29px; border-radius: 5px;">
-		<div style="padding-bottom: 20px;">
-			<a href="#"><img src="https://img-fotki.yandex.ru/get/16103/311645665.0/0_122719_2bdfcb3c_orig.png" width="134" height="28" border="0" title="logo-main" alt="logo-main"/></a>
-		</div>
-		<div style="padding-bottom: 25px;">
-			<a href="#" style="text-decoration: none; margin: 0; font-size: 17px; color: #7c7c7c; font-weight: 300;">Лучшие стоматологические клиники Москвы</a>
-		</div>
-		<div style="position: relative; margin-bottom: 15px; height: 65px;">
-			<a style="position: absolute; top: 0; left: 0;" href="#">
-				<img style="width: 87px; height: 100%;" src="https://img-fotki.yandex.ru/get/9798/311645665.0/0_122716_6640bace_orig.png" width="87" height="65" border="0" title="image1" alt="image1"/>
+	<div class="yell_widget">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			.yell-company-rating{
+				position: relative;
+				width: 73px;
+				height: 16px;
+				margin-top: -2px;
+				margin-bottom: 4px;
+			}
+			.yell-rating, .yell-stars{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+			}
+			.yell-stars{
+				width: 100%;
+			}
+			.yell-rating{
+				width: 50px;
+				max-width: 73px;
+				background-color: #F04C49;
+			}
+			#company1 .rating{
+				width: 73px;
+			}
+			#company2 .rating{
+				width: 35px;
+			}
+			#company3 .rating{
+				width: 50px;
+			}
+			*, *:before, *:after{
+				-webkit-box-sizing: border-box;
+				    -moz-box-sizing: border-box;
+				         box-sizing: border-box; 
+			}
+			div.yell_widget a{
+				font-weight: 300 !important;
+				text-decoration: none !important;
+			}
+			div.yell_widget{
+				width: 300px !important;
+				height: 400px !important;
+				font-family: Roboto !important;
+				font-weight: 300 !important;
+				background-color: #FFF !important;
+				-webkit-border-radius: 5px !important;
+				        border-radius: 5px !important;
+				border: none !important;
+				padding: 28px 35px !important;
+				position: relative !important;
+				outline: none !important;
+				display: inline-block !important;
+			}
+			div.yell_widget .yell-logo{
+				position: relative !important;
+				display: inline-block !important;
+				top: 0 !important;
+				right: 0 !important;
+				width: 134px !important;
+				height: 28px !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				outline: none !important;
+				margin-bottom: 20px !important;
+			}
+			div.yell_widget .yell-logo img{
+				position: absolute !important;
+				display: inline-block !important;
+				top: 0 !important;
+				right: 0 !important;
+				width: 134px !important;
+				height: 28px !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				outline: none !important;
+				text-align: left;
+			}
+			div.yell_widget .yell-category{
+				font-variant: normal !important;
+				font-style: normal !important;
+				text-align: left !important;
+				text-decoration: none !important;
+				text-transform: none !important;
+				display: block !important;
+				font-weight: 300 !important;
+				font-size: 17px !important;
+				color: #7c7c7c !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				border: none !important;
+				outline: none !important;
+				margin-bottom: 23px !important;
+			}
+			div.yell_widget .yell-companies{
+				position: relative !important;
+				display: block !important;
+				top: 0 !important;
+				right: 0 !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				outline: none !important;
+			}
+			div.yell_widget .yell-company{
+				position: relative !important;
+				height: 65px !important;
+				display: block !important;
+				top: 0 !important;
+				right: 0 !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				outline: none !important;
+				margin-bottom: 15px !important;
+			}
+			div.yell_widget .yell-company .yell-company-image{
+				position: relative !important;
+				display: inline-block !important;
+				top: 0 !important;
+				right: 0 !important;
+				width: 87px !important;
+				height: 65px !important;
+				padding: 0 !important;
+				float: left !important;
+				margin: 0 !important;
+			}
+			div.yell_widget .yell-company .yell-company-image img{
+				width: 87px !important;
+				height: 65px !important;
+				border: none !important;
+				outline: none !important;
+				display: inline !important;
+				float: none !important;
+				text-align: left !important;
+				position: absolute !important;
+				top: 0 !important;
+				left: 0 !important;
+			}
+			div.yell_widget .yell-company .yell-company-middle{
+				display: block !important;
+				float: left !important;
+				width: 110px !important;
+				height: 65px !important;
+				padding: 0 8px !important;
+			}
+			div.yell_widget .yell-company .yell-company-rating{
+				display: inline-block !important;
+				border: none !important;
+				outline: none !important;
+				float: none !important;
+			}
+			div.yell_widget .yell-company .yell-company-name{
+				display: inline-block !important;
+				text-decoration: none !important;
+				text-transform: none !important;
+				font-size: 12px !important;
+				color: #7c7c7c !important;
+				font-weight: 400 !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				margin-top: -3px !important;
+				height: 45px !important;
+				overflow: hidden !important;
+				text-overflow: ellipsis !important;
+				width: 95px !important;
+			}
+			div.yell_widget .yell-company .yell-comments-count{
+				display: inline-block !important;
+				float: left !important;
+				width: 31px !important;
+				height: 31px !important;
+				font-style: normal !important;
+				outline: none !important;
+				border: none !important;
+				font-variant: normal !important;
+				font-style: normal !important;
+				color: #fff !important;
+				font-size: 10px !important;
+				line-height: 26px !important;
+				text-align: center !important;
+				background: url(https://img-fotki.yandex.ru/get/6515/311645665.0/0_12271a_62433ecf_orig.png) 0 0 no-repeat;
+			}
+		</style>
+		<div>
+			<a href="#" class="yell-logo">
+				<img src="https://img-fotki.yandex.ru/get/16103/311645665.0/0_122719_2bdfcb3c_orig.png" width="134" height="28" border="0" title="logo-main" alt="logo-main"/>
 			</a>
-			<div style="position: absolute; top: 0; left: 95px; width: 97px;">
-				<div id="company1">
-					<div class="rating"></div>
-					<div class="stars">
-						<img src="https://img-fotki.yandex.ru/get/4403/311645665.0/0_123920_277c8d1a_orig.png" alt="stars">
+			<a class="yell-category" href="#">Лучшие стоматологические клиники Москвы</a>
+			<div class="yell-companies">
+				<div class="yell-company yell-company-1">
+					<a class="yell-company-image" href="#">
+						<img src="https://img-fotki.yandex.ru/get/9798/311645665.0/0_122716_6640bace_orig.png" width="87" height="65" border="0" title="image1" alt="image1"/>
+					</a>
+					<div class="yell-company-middle">
+						<div class="yell-company-rating">
+						<div class="yell-rating"></div>
+						<div class="yell-stars">
+							<img src="https://img-fotki.yandex.ru/get/4403/311645665.0/0_123920_277c8d1a_orig.png" alt="stars">
+						</div>
 					</div>
+					<a href="#" class="yell-company-name">Стоматология «Столица»</a>
+					</div>
+					<div class="yell-comments-count">120</div>
 				</div>
-				<a href="#" style="text-decoration: none; margin: 0; display: block; height: 44px; font-size: 12px; color: #7c7c7c; font-weight: 400; overflow: hidden;">Стоматология «Столица»</a>
-			</div>
-			<div style="padding-top: 2px; text-align: center; background: url(https://img-fotki.yandex.ru/get/6515/311645665.0/0_12271a_62433ecf_orig.png) 0 0 no-repeat; position: absolute; top: 0; right: 0; width: 32px; height: 32px;">
-				<span style="color: #fff; font-size: 10px; font-weight: 400;">120</span>
+				<div class="yell-company yell-company-2">
+					<a class="yell-company-image" href="#">
+						<img src="https://img-fotki.yandex.ru/get/41/311645665.0/0_122717_2789dd7e_orig.png" width="87" height="65" border="0" title="image1" alt="image1"/>
+					</a>
+					<div class="yell-company-middle">
+						<div class="yell-company-rating">
+						<div class="yell-rating"></div>
+						<div class="yell-stars">
+							<img src="https://img-fotki.yandex.ru/get/4403/311645665.0/0_123920_277c8d1a_orig.png" alt="stars">
+						</div>
+					</div>
+					<a href="#" class="yell-company-name">Стоматология 24 часа «Пример-Мед»</a>
+					</div>
+					<div class="yell-comments-count">10</div>
+				</div>
+				<div class="yell-company yell-company-3">
+					<a class="yell-company-image" href="#">
+						<img src="https://img-fotki.yandex.ru/get/4011/311645665.0/0_122718_a864a37f_orig.png" width="87" height="65" border="0" title="image1" alt="image1"/>
+					</a>
+					<div class="yell-company-middle">
+						<div class="yell-company-rating">
+						<div class="yell-rating"></div>
+						<div class="yell-stars">
+							<img src="https://img-fotki.yandex.ru/get/4403/311645665.0/0_123920_277c8d1a_orig.png" alt="stars">
+						</div>
+					</div>
+					<a href="#" class="yell-company-name">ФН-ДЕНТ</a>
+					</div>
+					<div class="yell-comments-count">25</div>
+				</div>
 			</div>
 		</div>
-		<div style="position: relative; margin-bottom: 15px; height: 65px;">
-			<a style="position: absolute; top: 0; left: 0;" href="#">
-				<img style="width: 87px; height: 100%;" src="https://img-fotki.yandex.ru/get/41/311645665.0/0_122717_2789dd7e_orig.png" width="87" height="65" border="0" title="image1" alt="image1"/>
-			</a>
-			<div style="position: absolute; top: 0; left: 95px; width: 97px;">
-				<div id="company2">
-					<div class="rating"></div>
-					<div class="stars">
-						<img src="https://img-fotki.yandex.ru/get/4403/311645665.0/0_123920_277c8d1a_orig.png" alt="stars">
-					</div>
-				</div>
-				<a href="#" style="text-decoration: none; margin: 0; display: block; height: 44px; font-size: 12px; color: #7c7c7c; font-weight: 400; overflow: hidden; text-overflow: ellipsis;">Стоматология 24 часа «Пример-Мед»</a>
-			</div>
-			<div style="padding-top: 2px; text-align: center; background: url(https://img-fotki.yandex.ru/get/6515/311645665.0/0_12271a_62433ecf_orig.png) 0 0 no-repeat; position: absolute; top: 0; right: 0; width: 32px; height: 32px;">
-				<span style="color: #fff; font-size: 10px; font-weight: 400;">10</span>
-			</div>
-		</div>
-		<div style="position: relative; height: 65px;">
-			<a style="position: absolute; top: 0; left: 0;" href="#">
-				<img style="width: 87px; height: 100%;" src="https://img-fotki.yandex.ru/get/4011/311645665.0/0_122718_a864a37f_orig.png" width="87" height="65" border="0" title="image1" alt="image1"/>
-			</a>
-			<div style="position: absolute; top: 0; left: 95px; width: 97px;">
-				<div id="company3">
-					<div class="rating"></div>
-					<div class="stars">
-						<img src="https://img-fotki.yandex.ru/get/4403/311645665.0/0_123920_277c8d1a_orig.png" alt="stars">
-					</div>
-				</div>
-				<a href="#" style="text-decoration: none; margin: 0; display: block; height: 44px; font-size: 12px; color: #7c7c7c; font-weight: 400; overflow: hidden; text-overflow: ellipsis;">ФН-ДЕНТ</a>
-			</div>
-			<div style="padding-top: 2px; text-align: center; background: url(https://img-fotki.yandex.ru/get/6515/311645665.0/0_12271a_62433ecf_orig.png) 0 0 no-repeat; position: absolute; top: 0; right: 0; width: 32px; height: 32px;">
-				<span style="color: #fff; font-size: 10px; font-weight: 400;">25</span>
-			</div>
-		</div>
-	</div>
+	</div><!-- end of .yell_widget -->
 </body>
 </html>
